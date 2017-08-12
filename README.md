@@ -12,7 +12,7 @@
 bash main.sh
 `
 
-![Screenshot](https://raw.githubusercontent.com/himanshub16/ProxyMan/master/screenshot.png)
+![Screenshot](https://github.com/mihkhub/ProxyMan/blob/master/screenshot.png)
 
 # FAQ
 * **Why do someone need it?**
