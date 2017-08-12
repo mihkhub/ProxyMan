@@ -78,6 +78,8 @@ unset_proxy() {
 	gsettings set org.gnome.system.proxy.https port 0
 	gsettings set org.gnome.system.proxy.ftp host "\"\""
 	gsettings set org.gnome.system.proxy.ftp port 0
+	gsettings set org.gnome.system.proxy.socks host "\"\""
+	gsettings set org.gnome.system.proxy.socks port 0
 	gsettings set org.gnome.system.proxy.http use-authentication false
 	gsettings set org.gnome.system.proxy.http authentication-user "\"\""
 	gsettings set org.gnome.system.proxy.http authentication-password "\"\""
@@ -95,6 +97,8 @@ set_proxy() {
 		gsettings set org.gnome.system.proxy.https port $2
 		gsettings set org.gnome.system.proxy.ftp host $1
 		gsettings set org.gnome.system.proxy.ftp port $2
+		gsettings set org.gnome.system.proxy.socks host $1
+		gsettings set org.gnome.system.proxy.socks port $2
 	elif [ "$3" = "n" ]; then
 		gsettings set org.gnome.system.proxy.http host $1
 		gsettings set org.gnome.system.proxy.http port $2
@@ -102,6 +106,8 @@ set_proxy() {
 		gsettings set org.gnome.system.proxy.https port $8
 		gsettings set org.gnome.system.proxy.ftp host $9
 		gsettings set org.gnome.system.proxy.ftp port $10
+		gsettings set org.gnome.system.proxy.socks host $9
+		gsettings set org.gnome.system.proxy.socks port $10
 	fi
 	gsettings set org.gnome.system.proxy mode "manual"
 }
